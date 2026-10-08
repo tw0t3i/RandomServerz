@@ -1,0 +1,2 @@
+# RandomServerz
+Random discord server

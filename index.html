@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Server | Discover Discord Communities</title>
+  <meta name="description" content="Jump into a random public Discord community with one click." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+
+  <main class="hero">
+    <span class="badge">✦ Community discovery</span>
+    <h1>Find your next <span class="gradient-text">Discord server</span></h1>
+    <p class="subtitle">One click. One random public community. Who knows who you'll meet?</p>
+
+    <button id="random-btn" class="btn-primary">🎲 Random Server</button>
+
+    <div id="result" class="card hidden">
+      <div class="card-icon" id="server-icon"></div>
+      <h2 id="server-name"></h2>
+      <p id="server-desc"></p>
+      <span class="tag" id="server-tag"></span>
+      <a id="join-btn" class="btn-secondary" href="#" target="_blank" rel="noopener noreferrer">Join Server</a>
+    </div>
+  </main>
+
+  <footer>Not affiliated with Discord Inc.</footer>
+
+  <script src="servers.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

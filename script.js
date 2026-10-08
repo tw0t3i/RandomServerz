@@ -25,6 +25,7 @@ function pickRandom() {
   descEl.textContent = s.description;
   tagEl.textContent = s.tag;
   joinBtn.href = s.invite;
+  window.open(s.invite, "_blank", "noopener");
 
   // Restart the pop animation each time
   result.classList.remove("hidden");

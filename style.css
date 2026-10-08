@@ -1,0 +1,103 @@
+:root {
+  --bg: #02030a;
+  --blue: #3b82ff;
+  --blue-soft: #5b9bff;
+  --text: #f2f5ff;
+  --muted: #a3acc4;
+  --card: rgba(18, 24, 48, 0.65);
+  --border: rgba(91, 155, 255, 0.2);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { min-height: 100%; }
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 35%, #0f2a7a 0%, #08123a 40%, var(--bg) 85%),
+    var(--bg);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Floating glow blobs */
+.glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+  animation: float 12s ease-in-out infinite;
+}
+.glow-1 { width: 380px; height: 380px; background: #2563ff; top: -80px; left: -80px; }
+.glow-2 { width: 320px; height: 320px; background: #5b6bff; bottom: -80px; right: -60px; animation-delay: -6s; }
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, 40px); }
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px 40px;
+  animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.badge {
+  background: rgba(59, 130, 255, 0.12);
+  border: 1px solid var(--border);
+  color: var(--blue-soft);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  max-width: 800px;
+  margin-bottom: 18px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #6aa4ff, #3b82ff, #8a7bff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  max-width: 520px;
+  margin-bottom: 36px;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.btn-primary {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  background:
